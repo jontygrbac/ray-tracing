@@ -11,10 +11,12 @@ TARGET = main
 TARGET_DEL = main.exe
 
 # Source files
-SRCS = main.cpp
+SRCS = main.cpp 
+
+MODULES = vec.cpp
 
 # Object files
-OBJS = $(SRCS:.cpp=.o)
+OBJS = src/$(SRCS:.cpp=.o) src/modules/$(MODULES:.cpp=.o)
 
 .default: all
 
